@@ -1,0 +1,65 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: url('https://camo.githubusercontent.com/78f6c405d9bd82fa7a69372bfc74e88e945cd051c5dff62f9bf8e4c50e3848cb/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6669742f742f313630302f3438302f312a6574444a735a4957663736736231505f6c365a5733772e676966');
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #fffffff6;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.bb {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.map {
+    max-width: 1500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #ffffff;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+iframe {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

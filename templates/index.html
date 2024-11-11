@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <h1>A R T I S T S</h1>
+    <form action="/searchBar" method="get">
+        <div class="search">
+                  <!-- <input  type="search" placeholder="search..." name="search" size=60px > -->
+                 <input size="25px" required list="artist" name="search" >
+            <datalist id="artist">
+                {{range .Artist}}
+                <option value="{{.Name}}">
+                    {{range .Members}}
+                <option value="{{.}}">
+                    {{end}}
+                <option value="{{.CreationDate}}">
+                <option value="{{.FirstAlbum}}">
+                    {{end}}
+                  
+                    {{range .Location}}
+                <option value="{{.}}">
+                    {{end}}
+                  
+            </datalist> <br>
+       
+            <button type="submit"> Search </button>
+       
+    </form>
+    <form action="/filter" method="get">
+        <div style="color: aliceblue; margin-top: 20px;">
+            <div class="firstalbum">
+                <p class="hh">Enter the first album date:</p>
+                <div>
+                    <label class="hh" for="firstAlbumMin">from:</label>
+                    <input class="hh" type="range" id="firstAlbumMin" name="firstAlbumMin" min="1955" max="2024"
+                        step="1" value="1955" oninput="this.nextElementSibling.value = this.value" id="lower">
+                    <output class="hh">1955
+                    </output>
+                    <label class="hh" for="firstAlbumMax">to:</label>
+                    <input type="range" id="firstAlbumMax" name="firstAlbumMax" min="1955" max="2024" step="1"
+                        value="2024" oninput="this.nextElementSibling.value = this.value" id="upper">
+                    <output class="hh">2024</output>
+                </div>
+            </div>
+            <div class="creationdate">
+                <p class="hh">Enter the creation date:</p>
+                <div>
+                    <label class="hh" for="creationdate">from:</label>
+                    <input type="range" id="creationDateMin" name="creationDateMin" min="1955" max="2024" step="1"
+                        value="1955" oninput="this.nextElementSibling.value = this.value">
+                    <output class="hh">1955</output>
+                    <label class="hh" for="creationdate">to:</label>
+                    <input type="range" id="creationDateMax" name="creationDateMax" min="1955" max="2024" step="1"
+                        value="2024" oninput="this.nextElementSibling.value = this.value">
+                    <output class="hh">2024</output>
+                </div>
+            </div>
+          
+            <div class="members">
+                <label class="hh">N^ Of The Members : </label>
+                <input type="checkbox" name="member" value="1"><label class="hh">1</label>
+                <input type="checkbox" name="member" value="2"><label class="hh">2</label>
+                <input type="checkbox" name="member" value="3"><label class="hh">3</label>
+                <input type="checkbox" name="member" value="4"><label class="hh">4</label>
+                <input type="checkbox" name="member" value="5"><label class="hh">5</label>
+                <input type="checkbox" name="member" value="6"><label class="hh">6</label>
+                <input type="checkbox" name="member" value="7"><label class="hh">7</label>
+                <input type="checkbox" name="member" value="8"><label class="hh">8</label>
+            </div>
+
+            <div  class="loca">
+                <input list="loca" name="location" size="25px">
+                <datalist id="loca" >
+                  
+                    {{range .Location}}
+                    <option value="{{.}}">
+                        {{end}}
+                    
+                </datalist>
+            </div>
+
+
+
+            <button type="submit"> Filter </button>
+    </form>
+    </div>
+    </div>
+    </form>
+    <div class="artist-container">
+        {{range .Artist}}
+        <div class="artist-card">
+            <a href="/Artist/{{.ID}}">
+                <img src="{{.Image}}" alt="{{.Name}}">
+            </a>
+            <p><strong>{{.Name}}</strong></p>
+            <ul>
+                <li>{{range .Members}}{{.}}, {{end}} </li>
+                <li>{{.CreationDate}}</li>
+                <li>{{.FirstAlbum}}</li>
+            </ul>
+        </div>
+        {{end}}
+    </div>
+</body>
+
+</html>

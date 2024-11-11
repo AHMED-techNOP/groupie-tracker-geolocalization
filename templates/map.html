@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styleMap.css">
+   
+</head>
+<body>
+    <h1>A R T I S T S</h1>
+    <div class="bb">
+        <a href="/Artist/{{.Id}}"> <button type="submit"> Go Back </button> </a>
+    </div>
+    <div class="map">
+        <div>
+            <h2>{{.Place}}</h2>
+            <p>Latitude: {{.Latitude}}</p>
+            <p>Longitude: {{.Longitude}}</p> <br>
+        </div>
+    <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox={{.Longitude}},{{.Latitude}},{{.Longitude}},{{.Latitude}}&layer=mapnik&marker={{.Latitude}},{{.Longitude}}"
+        width="100%" height="550" frameborder="0" title="map">
+    </iframe>
+    </div>
+</body>
+</html>

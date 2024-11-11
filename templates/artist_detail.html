@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Artist.Name}}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style2.css">
+
+</head>
+
+<body>
+    <div class="card">
+        <h1>{{.Artist.Name}}</h1>
+        <img src="{{.Artist.Image}}" >
+        <p style="color: #ffffff;"><strong>Creation Date:</strong> {{.Artist.CreationDate}}</p>
+        <p style="color: #ffffff;"><strong>First Album:</strong> {{.Artist.FirstAlbum}}</p>
+        <p style="color: #ffffff;"><strong>Members:</strong> {{range .Artist.Members}}{{.}}, {{end}}</p>
+
+        
+
+        <h3>Tour Locations:</h3>
+        <form action="/Geoloca">
+            <input type="hidden" name="id" value="{{.Artist.ID}}">
+            <ul>
+                {{range .Locations}}
+              
+                <button class="btn" name="localisation" value="{{.}}" type="submit">
+
+                    <li>{{.}}</li>
+                </button>
+
+                {{end}}
+            </ul>
+
+        </form>
+
+        <h3>Tour Dates:</h3>
+        <ul>
+            {{range .Dates}}
+            <li>{{.}}</li>
+            {{end}}
+        </ul>
+
+        <h3>Relations (Locations and Dates):</h3>
+        <ul>
+            {{range $location, $dates := .Relations}}
+            <li><strong>{{ $location }}</strong>: {{ range $dates }}{{.}}, {{end}}</li>
+            {{end}}
+        </ul>
+        <br>
+        <p><a href="/">Back to Artists</a></p>
+    </div>
+</body>
+
+</html>

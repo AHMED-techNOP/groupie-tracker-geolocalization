@@ -1,0 +1,109 @@
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background: url('https://camo.githubusercontent.com/78f6c405d9bd82fa7a69372bfc74e88e945cd051c5dff62f9bf8e4c50e3848cb/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6669742f742f313630302f3438302f312a6574444a735a4957663736736231505f6c365a5733772e676966');
+    /* background: url('https://github.com/AHMED-techNOP/my-images-repo/blob/main/mw85a.gif?raw=true'); */
+    background-color: #000000;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+}
+.artist-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+    padding: 10px;
+}
+.artist-card {
+    background-color: #ffffffe0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: 0.2s;
+    border: 1px solid #000000;
+}
+.artist-card:hover {
+    transform: scale(1.1);
+}
+.artist-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+.artist-card p {
+    margin: 10px 0 0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.search {
+    text-align: center;
+    margin: 20px;
+    max-width: 1800px;
+
+   
+}
+input {
+    size: 60px;
+}
+
+
+button{
+    padding: 8px 20px;
+    background-color: #286cff;
+    color: white;
+    /* text-decoration: none; */
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #003366;
+}
+
+input {
+    border-radius: 50px;
+    border: none;
+    font-size: large;
+}
+
+.members{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bb {
+    text-align: center;
+    margin-bottom: 20px;
+}
+iframe {
+    border: 4px solid #2980b9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 730px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    /* button {
+        padding: 10px 20px;
+        font-size: 1em;
+    } */
+
+    .search {
+        size: 30px;
+    }
+   
+
+
+}
+
+

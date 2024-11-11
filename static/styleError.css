@@ -1,0 +1,34 @@
+body{
+    font-family: "Josefin Sans", sans-serif;
+    background: url('https://camo.githubusercontent.com/78f6c405d9bd82fa7a69372bfc74e88e945cd051c5dff62f9bf8e4c50e3848cb/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6669742f742f313630302f3438302f312a6574444a735a4957663736736231505f6c365a5733772e676966');
+background-color: #485152;
+margin: 0;
+padding: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 330px;
+    margin: 0;
+    color: rgba(35, 125, 167, 0.836);
+}
+
+.error-container{
+    text-align: center;
+    color: #ffffffee;
+}
+p{
+    font-size: 40px;
+}
+a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+a:hover {
+    background-color: #3498db;
+    color: #fff;
+}

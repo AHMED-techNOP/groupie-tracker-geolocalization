@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <h1>A R T I S T S</h1>
+    <div class="bb">
+        <a  href="/"> <button type="submit"> Go Back</button> </a>
+    </div>
+    <div class="artist-container">
+        {{range .}}
+        <div class="artist-card">
+            <a href="/Artist/{{.ID}}">
+                <img src="{{.Image}}" alt="{{.Name}}" >
+            </a>
+            <p ><strong>{{.Name}}</strong></p>
+            <ul>
+                <li>{{range .Members}}{{.}}, {{end}} </li>
+                <li>{{.CreationDate}}</li>
+                <li>{{.FirstAlbum}}</li>
+            </ul>
+        </div>
+        {{end}}
+    </div>
+</body>
+
+</html>

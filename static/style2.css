@@ -1,0 +1,78 @@
+body {
+    font-family: "Josefin Sans", sans-serif;
+    /* background: url('https://github.com/AHMED-techNOP/my-images-repo/blob/main/mw85a.gif?raw=true'); */
+    background: url('https://camo.githubusercontent.com/78f6c405d9bd82fa7a69372bfc74e88e945cd051c5dff62f9bf8e4c50e3848cb/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6669742f742f313630302f3438302f312a6574444a735a4957663736736231505f6c365a5733772e676966');
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h3{
+    text-align: center;
+    color: #ffffff;
+}
+
+.card {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(43, 43, 43, 0.815);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 18px;
+    color: #666;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #679091;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a {
+    padding: 10px 20px;
+    background-color: #286cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #003366;
+}
+
+.btn {
+    background-color:  #679091;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 320px) {
+   
+
+    .card img {
+        width: 120px; 
+        height: 120px;
+    }
+}
+
+
+
